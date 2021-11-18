@@ -58,7 +58,7 @@ export class ApiService {
   This will shuffle all the cards
   */
   shuffleDealersDeck(id: string): Observable<Card[]> {
-    return this.http.get<Card[]>(`${URL}/dealers/${id}/shuffle/`, this.options);
+    return this.http.put<Card[]>(`${URL}/dealers/${id}/shuffle/`, this.options);
   }
 
   /* 
@@ -66,6 +66,6 @@ export class ApiService {
   This will arrange the cards in a consistent order
   */
   arrangeDealersDeck(id: string): Observable<Card[]> {
-    return this.http.get<Card[]>(`${URL}/dealers/${id}/arrange/`, this.options);
+    return this.http.put<Card[]>(`${URL}/dealers/${id}/arrange/`, this.options);
   }
 }
