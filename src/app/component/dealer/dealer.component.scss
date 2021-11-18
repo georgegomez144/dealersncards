@@ -1,0 +1,17 @@
+.dealer-card {
+  margin: 20px;
+  width: 250px;
+
+  &.fullView {
+      width: 400px;
+  }
+
+  .card-actions {
+      display: flex;
+      flex-flow: row nowrap;
+
+      .flex {
+          flex: 1;
+      }
+  }
+}

@@ -1,0 +1,24 @@
+<mat-card class="dealer-card" *ngIf="dealer" [class]="showDeck ? 'fullView' : ''">
+  <mat-card-title>{{ dealer.name }}</mat-card-title>
+  <mat-card-content>
+    <div class="dealers-deck" *ngIf="showDeck">
+      <deck [id]="dealer.id"></deck>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <div *ngIf="!showDeck">
+      <button
+        mat-button
+        color="primary"
+        (click)="openAndShowDeck()"
+      >
+        Show Dealer's Deck
+      </button>
+    </div>
+    <div *ngIf="showDeck">
+      <button mat-button color="primary" (click)="closeDeck()">
+        Hide Dealer's Deck
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

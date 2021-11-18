@@ -1,0 +1,21 @@
+.actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+
+  button:first-child {
+    margin-right: 20px;
+  }
+}
+
+.deck {
+  max-height: 400px;
+  overflow-y: auto;
+
+  .card {
+    display: flex;
+    margin: 10px 20px;
+  }
+}

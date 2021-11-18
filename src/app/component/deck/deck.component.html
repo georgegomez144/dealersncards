@@ -1,0 +1,21 @@
+<div class="actions">
+  <button mat-raised-button color="primary" (click)="shuffleDeck()">
+    Shuffle
+  </button>
+  <button mat-raised-button color="accent" (click)="arrangeDeck()">
+    Arrange
+  </button>
+</div>
+<div class="deck">
+  <mat-spinner
+    *ngIf="loading || deck.length === 0"
+    color="primary"
+    mode="indeterminate"
+    diameter="40"
+  ></mat-spinner>
+  <div class="card" *ngFor="let card of deck">
+    <span>{{ card.rank }}</span>
+    <span class="spacer"></span>
+    <span>{{ card.suit }}</span>
+  </div>
+</div>
