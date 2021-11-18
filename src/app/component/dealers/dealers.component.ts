@@ -10,8 +10,6 @@ import { Dealer } from 'src/app/interface/interfaces';
 export class DealersComponent implements OnInit {
   loading: boolean = true;
   dealers: Dealer[] = [];
-  dealerId: string | null = null;
-  dealerOpen : boolean = false;
 
   constructor(private api: ApiService) {
     this.getDealers();
@@ -26,9 +24,5 @@ export class DealersComponent implements OnInit {
         this.loading = false;
       }
     });
-  }
-
-  toggleDealer(status: boolean): void {
-    this.dealerOpen = status;
   }
 }

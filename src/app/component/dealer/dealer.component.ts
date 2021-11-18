@@ -13,20 +13,17 @@ export class DealerComponent implements OnInit {
 
   dealer: Dealer | null = null;
 
-  constructor(private api: ApiService) {
-  }
+  constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.api.getDealer(this.dealerId).subscribe((dealer) => {
-      if(dealer) this.dealer = dealer;
-    });
+    if (this.dealerId) {
+      this.api.getDealer(this.dealerId).subscribe((dealer) => {
+        if (dealer) this.dealer = dealer;
+      });
+    }
   }
 
-  openAndShowDeck(): void {
-    this.showDeck = true;
-  }
-
-  closeDeck(): void {
-    this.showDeck = false;
+  toogleDeckVisibility(): void {
+    this.showDeck = !this.showDeck;
   }
 }

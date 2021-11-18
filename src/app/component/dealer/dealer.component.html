@@ -10,13 +10,13 @@
       <button
         mat-button
         color="primary"
-        (click)="openAndShowDeck()"
+        (click)="toogleDeckVisibility()"
       >
         Show Dealer's Deck
       </button>
     </div>
     <div *ngIf="showDeck">
-      <button mat-button color="primary" (click)="closeDeck()">
+      <button mat-button color="primary" (click)="toogleDeckVisibility()">
         Hide Dealer's Deck
       </button>
     </div>

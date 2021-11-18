@@ -6,7 +6,7 @@ export interface Dealer {
     name: string
 }
 
-export interface Deck {
+export interface Card {
     rank: string,
     suit: string,
 }

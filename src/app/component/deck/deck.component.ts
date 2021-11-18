@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Deck } from 'src/app/interface/interfaces';
+import { Card } from 'src/app/interface/interfaces';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class DeckComponent implements OnInit {
   @Input('id') dealerId: any;
   @Input() fetchDeck: boolean = false;
   loading: boolean = false;
-  deck: Deck[] = [];
+  deck: Card[] = [];
 
   constructor(private api: ApiService) {}
 

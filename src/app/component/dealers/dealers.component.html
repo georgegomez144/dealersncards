@@ -4,10 +4,9 @@
   *ngIf="dealers.length === 0 || loading"
 ></mat-progress-bar>
 
-<!-- <button mat-raised-button color="primary" (ngClick)="getDealers()">Get Dealers</button> -->
-
 <div class="dealers-container">
+  <h1 class="title">Your Dealers</h1>
   <div *ngFor="let dealer of dealers">
-    <dealer *ngIf="dealer || dealerOpen" [id]="dealer.id"></dealer>
+    <dealer *ngIf="dealer" [id]="dealer.id"></dealer>
   </div>
 </div>

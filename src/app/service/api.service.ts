@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Status, Dealer, Deck } from '../interface/interfaces';
+import { Status, Dealer, Card } from '../interface/interfaces';
 
 const URL = 'https://dealer-5wb4b3itbq-uc.a.run.app';
 const TOKEN = 'Bearer d61468e0-43fc-11ec-90a5-106530de3ca7';
@@ -49,23 +49,23 @@ export class ApiService {
   GET /dealers/{id}/deck/
   Returns a deck of cards in their current order
   */
-  getDealersDeck(id: string): Observable<Deck[]> {
-    return this.http.get<Deck[]>(`${URL}/dealers/${id}/deck/`, this.options);
+  getDealersDeck(id: string): Observable<Card[]> {
+    return this.http.get<Card[]>(`${URL}/dealers/${id}/deck/`, this.options);
   }
 
   /* 
   GET /dealers/{id}/shuffle/
   This will shuffle all the cards
   */
-  shuffleDealersDeck(id: string): Observable<Deck[]> {
-    return this.http.get<Deck[]>(`${URL}/dealers/${id}/shuffle/`, this.options);
+  shuffleDealersDeck(id: string): Observable<Card[]> {
+    return this.http.get<Card[]>(`${URL}/dealers/${id}/shuffle/`, this.options);
   }
 
   /* 
   GET /dealers/{id}/arrange/
   This will arrange the cards in a consistent order
   */
-  arrangeDealersDeck(id: string): Observable<Deck[]> {
-    return this.http.get<Deck[]>(`${URL}/dealers/${id}/arrange/`, this.options);
+  arrangeDealersDeck(id: string): Observable<Card[]> {
+    return this.http.get<Card[]>(`${URL}/dealers/${id}/arrange/`, this.options);
   }
 }
