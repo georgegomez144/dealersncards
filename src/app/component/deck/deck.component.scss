@@ -13,9 +13,19 @@
 .deck {
   max-height: 400px;
   overflow-y: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   .card {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px 20px;
+    width: calc(25% - 70px);
+    padding: 20px 10px;
+    border: 1px solid #222;
+    border-radius: 10px;
   }
 }

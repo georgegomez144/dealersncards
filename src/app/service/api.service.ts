@@ -14,10 +14,9 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
     this.options = {
-      headers: {
-        Authorization: TOKEN,
-        Accept: 'application/json',
-      },
+      headers: new HttpHeaders()
+        .set('Authorization', TOKEN)
+        .set('Accept', 'application/json')
     };
   }
 

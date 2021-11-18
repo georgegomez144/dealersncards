@@ -14,8 +14,6 @@
     diameter="40"
   ></mat-spinner>
   <div class="card" *ngFor="let card of deck">
-    <span>{{ card.rank }}</span>
-    <span class="spacer"></span>
-    <span>{{ card.suit }}</span>
+    <span><strong>{{ card.rank }}</strong> of <strong>{{ card.suit }}</strong></span>
   </div>
 </div>
